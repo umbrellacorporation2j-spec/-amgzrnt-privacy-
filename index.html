@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>سياسة الخصوصية | امقزرنت | amgzrnt</title>
+  <meta name="description" content="سياسة الخصوصية الرسمية لمتجر امقزرنت | amgzrnt">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0618;
+      --bg-card: #150e24;
+      --bg-soft: #1e1533;
+      --border: #2d2248;
+      --text: #f0e9ff;
+      --text-muted: #a89bc4;
+      --primary: #a855f7;
+      --primary-soft: rgba(168, 85, 247, 0.15);
+      --primary-glow: rgba(168, 85, 247, 0.35);
+      --accent: #c084fc;
+      --radius: 18px;
+      --shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+      --font-size-base: 1rem;
+      --glass-bg: rgba(21, 14, 36, 0.75);
+      --glass-border: rgba(168, 85, 247, 0.18);
+    }
+
+    /* Light mode */
+    html.light {
+      --bg: #f5f0ff;
+      --bg-card: #ffffff;
+      --bg-soft: #f0e9ff;
+      --border: #e0d4f7;
+      --text: #1a1028;
+      --text-muted: #6b5b8a;
+      --primary: #7c3aed;
+      --primary-soft: rgba(124, 58, 237, 0.12);
+      --primary-glow: rgba(124, 58, 237, 0.2);
+      --accent: #8b5cf6;
+      --shadow: 0 12px 40px rgba(124, 58, 237, 0.08);
+      --glass-bg: rgba(255, 255, 255, 0.7);
+      --glass-border: rgba(124, 58, 237, 0.15);
+    }
+
+    /* Large text */
+    html.large-text {
+      --font-size-base: 1.12rem;
+    }
+
+    html.large-text body {
+      font-size: var(--font-size-base);
+    }
+
+    html.large-text h1 {
+      font-size: clamp(2.1rem, 5.5vw, 2.7rem) !important;
+    }
+
+    html.large-text section h2,
+    html.large-text .intro h2,
+    html.large-text .final-words h3 {
+      font-size: 1.35rem !important;
+    }
+
+    /* Glass effect */
+    html.glass .card,
+    html.glass .summary,
+    html.glass .intro,
+    html.glass section,
+    html.glass .contact,
+    html.glass .final-words {
+      background: var(--glass-bg) !important;
+      backdrop-filter: blur(18px) saturate(1.4);
+      -webkit-backdrop-filter: blur(18px) saturate(1.4);
+      border-color: var(--glass-border) !important;
+    }
+
+    html.glass .summary {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.18), rgba(192, 132, 252, 0.1)) !important;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      min-height: 100vh;
+      font-size: var(--font-size-base);
+      transition: background 0.35s ease, color 0.35s ease;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 15% -5%, rgba(168, 85, 247, 0.22), transparent),
+        radial-gradient(ellipse 50% 40% at 90% 5%, rgba(139, 92, 246, 0.12), transparent),
+        radial-gradient(ellipse 40% 30% at 50% 100%, rgba(168, 85, 247, 0.08), transparent);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    html.light body::before {
+      background:
+        radial-gradient(ellipse 70% 50% at 15% -5%, rgba(124, 58, 237, 0.12), transparent),
+        radial-gradient(ellipse 50% 40% at 90% 5%, rgba(139, 92, 246, 0.08), transparent);
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 28px 20px 100px;
+    }
+
+    /* Top bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+
+    .logo-text {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--primary);
+      letter-spacing: -0.01em;
+    }
+
+    .settings-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow);
+    }
+
+    .settings-btn:hover {
+      color: var(--primary);
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .settings-btn:active {
+      transform: scale(0.94);
+    }
+
+    .settings-btn svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(168, 85, 247, 0.28);
+    }
+
+    .badge svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    h1 {
+      font-size: clamp(1.85rem, 5vw, 2.45rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, #fff 10%, #c084fc 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    html.light h1 {
+      background: linear-gradient(135deg, #1a1028 10%, #7c3aed 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .updated {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    /* Cards */
+    .summary {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.16), rgba(192, 132, 252, 0.08));
+      border: 1px solid rgba(168, 85, 247, 0.28);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      margin-bottom: 28px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      transition: all 0.3s ease;
+    }
+
+    .summary-icon {
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      background: var(--primary-soft);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+    }
+
+    .summary-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .summary p {
+      font-size: 1.02rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .intro, section, .contact, .final-words {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px 28px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .intro h2, section h2, .final-words h3 {
+      font-size: 1.18rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 0.82rem;
+      font-weight: 700;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .data-item {
+      background: var(--bg-soft);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .data-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .data-item strong {
+      display: block;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 3px;
+      font-size: 0.98rem;
+    }
+
+    .data-item span {
+      color: var(--text-muted);
+      font-size: 0.93rem;
+    }
+
+    .note {
+      margin-top: 14px;
+      padding: 13px 15px;
+      background: rgba(168, 85, 247, 0.08);
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      border-radius: 12px;
+      color: var(--accent);
+      font-size: 0.93rem;
+      font-weight: 500;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      position: relative;
+      padding-right: 26px;
+      margin-bottom: 11px;
+      color: var(--text-muted);
+    }
+
+    ul li:last-child {
+      margin-bottom: 0;
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 11px;
+      width: 7px;
+      height: 7px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact h2 {
+      justify-content: center;
+    }
+
+    .contact .name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .contact a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .contact a:hover {
+      color: var(--accent);
+    }
+
+    .contact .principle {
+      margin-top: 12px;
+      color: var(--text-muted);
+      font-size: 0.93rem;
+    }
+
+    .final-words p {
+      color: var(--text-muted);
+      margin-bottom: 11px;
+    }
+
+    .quote {
+      font-weight: 700;
+      color: var(--text);
+      font-size: 1.05rem;
+      border-right: 3px solid var(--primary);
+      padding-right: 14px;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      margin-top: 32px;
+    }
+
+    .copyright {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-bottom: 16px;
+    }
+
+    .dev-sign {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* ========== Bottom Sheet ========== */
+    .sheet-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    .sheet-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .bottom-sheet {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 101;
+      background: var(--bg-card);
+      border-radius: 24px 24px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      padding: 12px 20px 36px;
+      transform: translateY(105%);
+      transition: transform 0.38s cubic-bezier(0.32, 0.72, 0, 1);
+      max-width: 520px;
+      margin: 0 auto;
+      box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .bottom-sheet.open {
+      transform: translateY(0);
+    }
+
+    .sheet-handle {
+      width: 40px;
+      height: 5px;
+      background: var(--border);
+      border-radius: 99px;
+      margin: 0 auto 20px;
+    }
+
+    .sheet-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 22px;
+      color: var(--text);
+    }
+
+    .setting-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 4px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .setting-row:last-child {
+      border-bottom: none;
+    }
+
+    .setting-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .setting-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .setting-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .setting-label {
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--text);
+    }
+
+    .setting-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 1px;
+    }
+
+    /* iOS-style toggle */
+    .toggle {
+      position: relative;
+      width: 51px;
+      height: 31px;
+      flex-shrink: 0;
+    }
+
+    .toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      position: absolute;
+    }
+
+    .toggle-track {
+      position: absolute;
+      inset: 0;
+      background: #3a3a3c;
+      border-radius: 31px;
+      cursor: pointer;
+      transition: background 0.25s ease;
+    }
+
+    html.light .toggle-track {
+      background: #e0d4f7;
+    }
+
+    .toggle-track::after {
+      content: '';
+      position: absolute;
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      background: #fff;
+      top: 2px;
+      left: 2px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      transition: transform 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+
+    .toggle input:checked + .toggle-track {
+      background: var(--primary);
+    }
+
+    .toggle input:checked + .toggle-track::after {
+      transform: translateX(20px);
+    }
+
+    /* RTL flip for toggle */
+    [dir="rtl"] .toggle-track::after {
+      left: auto;
+      right: 2px;
+    }
+
+    [dir="rtl"] .toggle input:checked + .toggle-track::after {
+      transform: translateX(-20px);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px 16px 90px;
+      }
+      .intro, section, .contact, .final-words {
+        padding: 20px 18px;
+      }
+      .summary {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Top bar -->
+    <div class="top-bar">
+      <div class="logo-text">امقزرنت</div>
+      <button class="settings-btn" id="settingsBtn" aria-label="الإعدادات">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      </button>
+    </div>
+
+    <header>
+      <div class="badge">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+        سياسة الخصوصية
+      </div>
+      <h1>امقزرنت | amgzrnt</h1>
+      <p class="updated">آخر تحديث: 26 أبريل 2026</p>
+    </header>
+
+    <div class="summary card">
+      <div class="summary-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      </div>
+      <p>خصوصيتك خط أحمر. إحنا هنا عشان نخدمك، مو عشان نبيعك. ناخذ أقل بيانات ممكنة، ونحميها بكل قوتنا.</p>
+    </div>
+
+    <div class="intro card">
+      <h2>المقدمة: كلام من القلب</h2>
+      <p style="color: var(--text-muted); margin-bottom: 10px;">مرحباً، أنا <strong style="color: var(--text);">المالكي</strong> مطور امقزرنت | amgzrnt.</p>
+      <p style="color: var(--text-muted); margin-bottom: 10px;">أنا أكره لما أدخل موقع ويحسني إنه يراقبني. أكره الإعلانات اللي تلاحقني. أكره لما تطبيق يطلب 20 صلاحية وهو ما يحتاجها.</p>
+      <p style="color: var(--text); font-weight: 500;">عشان كذا بنيت هذا المتجر على مبدأ واحد: <strong>الاحترام</strong>. احترام وقتك، احترام بياناتك، واحترام ذكائك. أنت مو "منتج" عشان نبيعه. أنت مستخدم نتشرف بوجوده.</p>
+    </div>
+
+    <section class="card">
+      <h2><span class="section-num">1</span> إيش البيانات اللي نجمعها ولماذا؟</h2>
+      <div class="data-item">
+        <strong>بيانات النشر</strong>
+        <span>اسم التطبيق، اسم المطور، الصورة، ملف APK. عشان يظهر تطبيقك ويقدر الناس يحملوه.</span>
+      </div>
+      <div class="data-item">
+        <strong>بيانات تقنية مجهولة</strong>
+        <span>زي نوع المتصفح وعدد التحميلات. عشان نحسن المتجر. ما نقدر نعرف مين أنت منها.</span>
+      </div>
+      <div class="data-item">
+        <strong>ملفات الكوكيز</strong>
+        <span>عشان نتذكر تفضيلاتك مثل الوضع الليلي.</span>
+      </div>
+      <div class="note">مهم: لا نطلب اسمك الحقيقي، ولا رقم جوالك، ولا موقعك.</div>
+    </section>
+
+    <section class="card">
+      <h2><span class="section-num">2</span> إيش اللي عمرنا ما راح نسويه؟</h2>
+      <ul>
+        <li><strong style="color: var(--text);">البيع:</strong> عمرنا ما راح نبيع بياناتك لشركات إعلانات.</li>
+        <li><strong style="color: var(--text);">التتبع:</strong> ما عندنا "بيكسل" يتتبعك في مواقع ثانية.</li>
+        <li><strong style="color: var(--text);">المراقبة:</strong> نفحص الـ APK للفيروسات فقط وبعدها ننساها.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="section-num">3</span> كيف نحمي بياناتك؟</h2>
+      <p style="color: var(--text-muted);">نستخدم سيرفرات قوقل Firebase المحمية بتشفير قوي. الوصول للبيانات مقتصر عليّ فقط كمدير للنظام.</p>
+    </section>
+
+    <section class="card">
+      <h2><span class="section-num">4</span> مسؤوليتك أنت</h2>
+      <p style="color: var(--text-muted); margin-bottom: 12px;">تأكد أن التطبيق اللي ترفعه:</p>
+      <ul>
+        <li>خالي من الفيروسات</li>
+        <li>يحترم خصوصية مستخدمينك</li>
+        <li>ما ينتهك حقوق أحد</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="section-num">5</span> حقوقك أنت</h2>
+      <ul>
+        <li><strong style="color: var(--text);">الحق في الحذف:</strong> تقدر تطلب حذف أي تطبيق رفعته.</li>
+        <li><strong style="color: var(--text);">الحق في المعرفة:</strong> من حقك تسألني إيش البيانات اللي عندي عنك.</li>
+      </ul>
+    </section>
+
+    <div class="contact card">
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="margin-left: 6px;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        تواصل معي
+      </h2>
+      <p class="name">المطور: المالكي</p>
+      <p>البريد الرسمي: <a href="mailto:rwwadalmalki@gmail.com">rwwadalmalki@gmail.com</a></p>
+      <p class="principle">المبدأ: بابي مفتوح دايماً للاحترام</p>
+    </div>
+
+    <div class="final-words card">
+      <h3>كلمة أخيرة من المطور</h3>
+      <p>أنا المالكي. مطور تطبيقات مفضّل، هادي في طبعي، بسيط في أسلوبي، لكني أطمح للأفضل دايماً. أؤمن أن التكنولوجيا الحقيقية هي اللي تخدم الإنسان بدون ما تستغله.</p>
+      <p>شكراً لأنك أعطيتني من وقتك ومن ثقتك. وعد مني: راح أكمل أشتغل بصمت عشان أقدم لك تجربة تستاهلها. أنت السبب اللي يخليني أطور أكثر.</p>
+      <p class="quote">"نصنع اليوم ما سيستخدمه الجميع غداً"</p>
+    </div>
+
+    <footer>
+      <p class="copyright">
+        جميع محتويات هذا المتجر مملوكة حصرياً لــ <strong>المالكي</strong> © 2026<br>
+        يمنع نسخها أو إعادة صياغتها.
+      </p>
+      <p class="dev-sign">امقزرنت | amgzrnt</p>
+    </footer>
+  </div>
+
+  <!-- Bottom Sheet -->
+  <div class="sheet-overlay" id="sheetOverlay"></div>
+  <div class="bottom-sheet" id="bottomSheet">
+    <div class="sheet-handle"></div>
+    <div class="sheet-title">الإعدادات</div>
+
+    <!-- Light Mode -->
+    <div class="setting-row">
+      <div class="setting-info">
+        <div class="setting-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </div>
+        <div>
+          <div class="setting-label">الوضع الفاتح</div>
+          <div class="setting-desc">تغيير مظهر الصفحة</div>
+        </div>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" id="lightToggle">
+        <span class="toggle-track"></span>
+      </label>
+    </div>
+
+    <!-- Glass Effect -->
+    <div class="setting-row">
+      <div class="setting-info">
+        <div class="setting-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+          </svg>
+        </div>
+        <div>
+          <div class="setting-label">التأثير الزجاجي</div>
+          <div class="setting-desc">مظهر شفاف وناعم</div>
+        </div>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" id="glassToggle">
+        <span class="toggle-track"></span>
+      </label>
+    </div>
+
+    <!-- Large Text -->
+    <div class="setting-row">
+      <div class="setting-info">
+        <div class="setting-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h10M4 18h14" />
+          </svg>
+        </div>
+        <div>
+          <div class="setting-label">حجم الخط الكبير</div>
+          <div class="setting-desc">تكبير النصوص للقراءة</div>
+        </div>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" id="fontToggle">
+        <span class="toggle-track"></span>
+      </label>
+    </div>
+  </div>
+
+  <script>
+    const settingsBtn = document.getElementById('settingsBtn');
+    const overlay = document.getElementById('sheetOverlay');
+    const sheet = document.getElementById('bottomSheet');
+    const lightToggle = document.getElementById('lightToggle');
+    const glassToggle = document.getElementById('glassToggle');
+    const fontToggle = document.getElementById('fontToggle');
+    const html = document.documentElement;
+
+    function openSheet() {
+      overlay.classList.add('open');
+      sheet.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSheet() {
+      overlay.classList.remove('open');
+      sheet.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    settingsBtn.addEventListener('click', openSheet);
+    overlay.addEventListener('click', closeSheet);
+
+    function loadSettings() {
+      if (localStorage.getItem('amgzrnt-light') === '1') {
+        html.classList.add('light');
+        lightToggle.checked = true;
+      }
+      if (localStorage.getItem('amgzrnt-glass') === '1') {
+        html.classList.add('glass');
+        glassToggle.checked = true;
+      }
+      if (localStorage.getItem('amgzrnt-font') === '1') {
+        html.classList.add('large-text');
+        fontToggle.checked = true;
+      }
+    }
+
+    lightToggle.addEventListener('change', () => {
+      html.classList.toggle('light', lightToggle.checked);
+      localStorage.setItem('amgzrnt-light', lightToggle.checked ? '1' : '0');
+    });
+
+    glassToggle.addEventListener('change', () => {
+      html.classList.toggle('glass', glassToggle.checked);
+      localStorage.setItem('amgzrnt-glass', glassToggle.checked ? '1' : '0');
+    });
+
+    fontToggle.addEventListener('change', () => {
+      html.classList.toggle('large-text', fontToggle.checked);
+      localStorage.setItem('amgzrnt-font', fontToggle.checked ? '1' : '0');
+    });
+
+    loadSettings();
+  </script>
+</body>
+</html>
